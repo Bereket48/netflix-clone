@@ -1,20 +1,22 @@
 import React from "react";
 import Row from "../Row/Row";
-import Requests from "../../utils/requests";
+import requests from "../../utils/requests";
 
 const RowList = () => {
   return (
     <>
       <Row
         title="NETFLIX ORIGINALS"
-        fetchUrl={Requests.fetchNetflixOriginals}
+        fetchUrl={requests.fetchActionMovies}
         isLargeRow={true}
       />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
+      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
+      <Row title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
+      <Row title="Comedy" fetchUrl={requests.fetchComedyMovies} />
+      <Row title="Action movies" fetchUrl={requests.fetchActionMovies} />
+      <Row title="Horror movies" fetchUrl={requests.fetchHorrorMovies} />
+      <Row title="Romance" fetchUrl={requests.fetchRomanceMovies} />
+      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
     </>
   );
 };

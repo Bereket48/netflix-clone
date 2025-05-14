@@ -8,7 +8,7 @@ const Home = () => {
     <>
     <Header />
     <Banner />
-    <RowList />
+    <RowList /> 
     <Footer />
     </>
   )

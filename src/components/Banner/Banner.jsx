@@ -8,7 +8,7 @@ const Banner = () => {
   useEffect(() => {
     (async () => {
       try {
-        const request = await axios.get(requests.fetchNetflixOriginals);
+        const request = await axios.get(requests.fetchComedyMovies);
         setMovie(
           request.data.results[
             Math.floor(Math.random() * request.data.results.length)
